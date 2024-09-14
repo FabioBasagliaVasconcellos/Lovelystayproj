@@ -1,0 +1,38 @@
+{
+  "name": "01-lovely-stay-nodejs",
+  "version": "1.0.0",
+  "description": "1. Fetch information about a given GitHub user (passed as a command-line argument) using the [GitHub API](https://docs.github.com/en/rest), and store it on one or more database tables - the mandatory fields are Name and Location, but you will get bonus points for additional fields; [] 2. Using a different command-line option, it should be possible to fetch and display all users already on the database (showing them on the command line); [] 3. Improving on the previous requirement, it should also be possible to list users only from a given location (again, using a command-line option); [] 4. Finally, the application should also query the programming languages this user seems to know/have repositories with, and store them on the database as well - allowing to query a user per location and/or programming languages; []",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx src/app.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts --fix",
+    "migration:create": "node-pg-migrate create",
+    "migration:run": "node-pg-migrate up",
+    "fetch:users": "tsx src/use-cases/find-users.ts",
+    "fetch:local": "tsx src/use-cases/find-local.ts",
+    "fetch:language": "tsx src/use-cases/find-language.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/node": "^22.5.4",
+    "eslint": "^8.57.0",
+    "prisma": "^5.19.1",
+    "tsup": "^8.2.4",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "node-pg-migrate": "^7.6.1",
+    "pg-promise": "^11.9.1",
+    "uuid": "^10.0.0"
+  }
+}
