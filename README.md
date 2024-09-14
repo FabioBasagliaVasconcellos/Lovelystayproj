@@ -6,13 +6,13 @@ In this project you can search for GitHub users and also search them from locati
 
 # Built with
 
--Node JS
--Typescript
--Docker
--Prisma
--ESlint
--Pg-promise
--Vitest
+- Node JS
+- Typescript
+- Docker
+- Prisma
+- ESlint
+- Pg-promise
+- Vitest
 
 # Getting started
 
