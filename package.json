@@ -6,7 +6,6 @@
   "scripts": {
     "start": "tsx src/app.ts",
     "build": "tsc",
-    "test": "vitest",
     "lint": "eslint src --ext .ts --fix",
     "migration:create": "node-pg-migrate create",
     "migration:run": "node-pg-migrate up",
@@ -29,6 +28,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
+    "@types/uuid": "^10.0.0",
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "node-pg-migrate": "^7.6.1",

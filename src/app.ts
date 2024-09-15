@@ -3,18 +3,8 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// prisma.user.create({
-//   data: {
-//     name: 'Fabio Vasconcellos',
-//     location: 'Braga, Portugal',
-//     followers: 2,
-//     repositories: 'https://api.github.com/users/thiagovasconcellos/repos',
-//     languages: 'Typescript',
-//   },
-// });
-
 async function main() {
-  const username = process.argv[2]; // Pega o username a partir do argumento na linha de comando
+  const username = process.argv[2];
   if (!username) {
     console.error('Please, send users GitHub name as an argument.');
     return;
@@ -32,5 +22,4 @@ async function main() {
   }
 }
 
-// Chama a função principal
 main();
